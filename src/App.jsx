@@ -1,5 +1,6 @@
 import { NavLink, Route, Routes, useParams } from 'react-router-dom'
 import { ArrowDownRight, ArrowLeft, ArrowUpRight, CircleHelp, Gamepad2, House, Layers3, UserRound } from 'lucide-react'
+import CarPlayPortfolio from './CarPlayPortfolio.jsx'
 
 const navigation = [
   { label: 'Home', path: '/', icon: House, end: true },
@@ -102,5 +103,5 @@ function NotFound() {
 }
 
 export default function App() {
-  return <div className="app-shell"><Sidebar /><main className="main-content"><Routes><Route path="/" element={<Home />} /><Route path="/work" element={<Work />} /><Route path="/work/:campaignName" element={<Campaign />} /><Route path="/play" element={<SimplePage label="Play" title="Off the clock" description="Experiments, side quests, and things made just because." />} /><Route path="/about" element={<SimplePage label="About me" title="The person behind it" description="A little more about me, how I think, and what I bring to the table." />} /><Route path="*" element={<NotFound />} /></Routes></main></div>
+  return <CarPlayPortfolio />
 }
